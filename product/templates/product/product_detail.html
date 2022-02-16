@@ -1,0 +1,36 @@
+{% extends 'product/base.html' %}
+{% block title %}loptop{% endblock %}
+
+{% block content %}
+    <div class="card m-2 product">
+        <a class="text-reset"><img class="card-img-top"></a>
+        <div class="card-body">
+            <a href="{% url 'product_detail'  product.id %}" class="text-reset">
+                <p class="card-title"><h3>{{ product.company}} {{ product.product_name }}</h3></p>
+            </a>
+        </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{ product.type_name}}</li>
+                <li class="list-group-item">{{ product.inches}}</li>
+                <li class="list-group-item">{{ product.screen_resoulation}}</li>
+                <li class="list-group-item">{{ product.cpu}}</li>
+                <li class="list-group-item">{{ product.ram}}</li>
+                <li class="list-group-item">{{ product.memory}}</li>
+                <li class="list-group-item">{{ product.gpu}}</li>
+                <li class="list-group-item">{{ product.opsys}}</li>
+                <li class="list-group-item">{{ product.weight}}</li>
+                <li class="list-group-item">{{ product.price}} euro</li>
+            </ul>        
+        <div class="card-footer">
+        </div>
+    </div>
+    <h2>recomended loptops</h2>
+    <div class="row my-3">
+        <!--main-->
+        <div class="col-12 col-md-9 order-md-2">
+            <div class="d-flex flex-wrap list-product">
+                {% include 'product/product_directory.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

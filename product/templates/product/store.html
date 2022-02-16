@@ -1,0 +1,17 @@
+{% extends 'product/base.html' %}
+{% block title %}loptop{% endblock %}
+{% block content %}
+
+
+<div class="container-fluid">
+    <div class="row my-3">
+        <!--main-->
+        <div class="col-12 col-md-9 order-md-2">
+            <div class="d-flex flex-wrap list-product">
+                {% include 'product/product_directory.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% for product in products %}
+<div class="card m-2 product">
+    <a class="text-reset"><img class="card-img-top"></a>
+    <div class="card-body">
+        <a href="{% url 'product_detail'  product.id %}" class="text-reset">
+            <p class="card-title">{{ product.company}} {{ product.product_name }}</p>
+        </a>
+    </div>
+    <div class="card-footer">
+        
+    </div>
+</div>
+{% endfor %}
