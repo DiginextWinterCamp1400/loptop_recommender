@@ -2,8 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from .models import Product
 import urllib.request, json 
 
-##
+
 def product_detail(request, id):
+    ## it's just messy code written in rush hours
     product = get_object_or_404(Product, id=id)
     inputurl = "http://195.248.241.84:8888/api/recommend/thirdParty/?format=json&id={}".format(id)
     with urllib.request.urlopen(inputurl) as url:
